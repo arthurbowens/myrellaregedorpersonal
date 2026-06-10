@@ -1,0 +1,79 @@
+:host {
+  display: block;
+}
+
+.hero-pattern {
+  background-color: #000000;
+  background-image:
+    radial-gradient(ellipse 80% 60% at 70% 40%, rgb(236 72 153 / 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 20% 80%, rgb(168 85 247 / 0.06) 0%, transparent 50%);
+}
+
+.hero-photo {
+  object-position: center top;
+}
+
+.hero-photo-glow {
+  box-shadow:
+    0 0 60px rgb(236 72 153 / 0.15),
+    0 25px 50px -12px rgb(0 0 0 / 0.8);
+}
+
+.about-video-glow {
+  aspect-ratio: 9 / 16;
+  max-height: 560px;
+  box-shadow:
+    0 0 40px rgb(236 72 153 / 0.1),
+    0 20px 40px -12px rgb(0 0 0 / 0.6);
+}
+
+.video-cover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgb(0 0 0 / 0.45), transparent 40%);
+  pointer-events: none;
+}
+
+.video-play-btn {
+  box-shadow: 0 0 30px rgb(236 72 153 / 0.4);
+}
+
+@media (min-width: 1024px) {
+  .about-video-glow {
+    max-height: none;
+    min-height: 100%;
+  }
+}
+
+.audience-card {
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.audience-card:hover {
+  transform: translateY(-4px);
+  border-color: rgb(236 72 153 / 0.3);
+}
+
+.pillar-card {
+  transition: border-color 0.25s ease;
+}
+
+.pillar-card:hover {
+  border-color: rgb(236 72 153 / 0.25);
+}
+
+.cta-glow {
+  box-shadow: 0 0 0 0 rgb(236 72 153 / 0.4);
+  animation: pulse-glow 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgb(236 72 153 / 0.35);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgb(236 72 153 / 0);
+  }
+}
